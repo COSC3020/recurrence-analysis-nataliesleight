@@ -40,19 +40,19 @@ a for loop that adds $(n*n)*(n)*(n*n)=n^5$ to the funciton.
 
 $T(n) = 3T(n/3) + n^5$
 
-    $= 3(3T(n/3/3) + n^5) + n^5$
+$= 3(3T(n/3/3) + n^5) + n^5$
 
-    $= 3^2 T(n/3^2) + 2n^5$
+$= 3^2 T(n/3^2) + 2n^5$
     
-    $= 3^i T(n/3^i) + in^5$
+$= 3^i T(n/3^i) + in^5$
     
-    for $i = \log{_3}{n}$
+for $i = \log{_3}{n}$
     
-    $= 3^\log{_3}{n} T(n/3^\log{_3}{n}) + \log{_3}{n} *n^5$
+$= 3^\log{_3}{n} T(n/3^\log{_3}{n}) + \log{_3}{n} *n^5$
     
-    $= nT(1) + n^5 \log{_3}{n}$
+$= nT(1) + n^5 \log{_3}{n}$
     
-    $= n + n^5 /log{_3}{n}$
+$= n + n^5 /log{_3}{n}$
 
 $T(n) ∈ Θ(n^5 \log{n})$
 
