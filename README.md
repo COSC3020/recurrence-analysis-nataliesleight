@@ -33,7 +33,7 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 
-The recurrence relation is $3T(n/3) + n^5$ for $n > 1$ where for $n ≤ 1$, $T(!) = 1$.
+The recurrence relation is $3T(n/3) + n^5$ for $n > 1$ where for $n ≤ 1$, $T(1) = 1$.
 
 This is because when $n ≤ 1$ the funtcion performs a check and returns. For any other value of $n$, the function makes 3 recursive called with argument $n/3$ and goes through 
 a for loop that adds $(n*n)*(n)*(n*n)=n^5$ to the funciton.
