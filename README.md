@@ -56,7 +56,7 @@ $= nT(1) + n^5 \sum_{j=0}^{\log{_3}{n}-1} 3^j$
     
 $= n + n^5 \sum_{j=0}^{\log{_3}{n}-1} 3^j$
 
-$T(n) ∈ Θ(n^5 \sum_{j=0}^{\log{_3}{n}-1} 3^j)$
+$T(n) ∈ Θ(n^5 \sum_{j=0}^{\log{n}-1} 3^j)$
 
 ***Note: The summation feels very out of place but I believe it to be the correct math for the $n^5$ part of the equation. Please let me know if it is not.***
 
