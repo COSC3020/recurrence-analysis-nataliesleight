@@ -36,15 +36,15 @@ might help with the notation for mathematical expressions.
 The recurrence relation is $3T(n/3) + n^5$ for $n > 1$ where for $n ≤ 1$, $T(1) = 1$.
 
 This is because when $n ≤ 1$ the funtcion performs a check and returns. For any other value of $n$, the function makes 3 recursive called with argument $n/3$ and goes through 
-a for loop that adds $(n*n)*(n)*(n*n)=n^5$ to the funciton.
+a for loop that adds $(n* n) * (n) * (n*n) = n^5$ to the funciton.
 
 $T(n) = 3T(n/3) + n^5$
 
 $= 3(3T(n/3/3) + n^5) + n^5$
 
-$= 3^2 T(n/3^2) + 2n^5$
+$= 3^2 T(n/3^2) + (3+1)n^5$
     
-$= 3^i T(n/3^i) + in^5$
+$= 3^i T(n/3^i) + n^5 \sum_{j=1}^(n-1) 3^i$
     
 for $i = \log{_3}{n}$
     
