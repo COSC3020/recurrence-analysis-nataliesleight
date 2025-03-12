@@ -66,7 +66,7 @@ $= nT(n/n) + n^5 \frac{n-1}{2}$
 
 $= n + n^5 \frac{n-1}{2}$
 
-$T(n) ∈ Θ(n^5 \frac{n-1}{2}$
+$T(n) ∈ Θ(n^5 \frac{n-1}{2})$
 
 
 ### Sources: I received help from Lars Kothoff.
