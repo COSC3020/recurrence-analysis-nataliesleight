@@ -48,23 +48,25 @@ $= 3(3^2T(n/(3^2)/3) + (3+1)n^5)) + n^5$
 
 $= 3^3 T(n/3^3) + (9+3+1)n^5$
     
-$= 3^i T(n/3^i) + n^5 \sum_{j=1}^{i} 3^(j-1)$
+$= 3^i T(n/3^i) + n^5 \sum_{j=1}^{i} 3^{j-1}$
 
 by geometric sum, $\sum_{x=1}^{y} a{_1} r^{i-1}  = \frac{a{_1}(1-r^y)}{1-r}$
 
-where $a{_1}$ is the initial term and $r$ is the common ration
+where $a{_1}$ is the initial term and $r$ is the common ratio
 
-$= 3^i T(n/3^i) + n^5 (1-3^n)/(1-3)$
+so for $\sum_{j=1}^{i} 3^{j-1}$, $a{_1} = 1$ and $r = 3$ so the summation equals $\frac{1(1-3^i)}{1-3} = \frac{1-3^i}{-2} = \frac{3^i-1}{2}$
 
-$= 3^i T(n/3^i) + n^5 (3^n - 1)/2$
+$= 3^i T(n/3^i) + n^5 \frac{3^i-1}{2}$
     
 for $i = \log{_3}{n}$
     
-$= nT(1) + n^5 (3^n - 1)/2$
-    
-$= n + n^5 (3^n - 1)/2$
+$= 3^{\log{_3}{n}} T(n/3^{\log{_3}{n}}) + n^5 \frac{3^{\log{_3}{n}}-1}{2}$
 
-$T(n) ∈ Θ(n^5 (3^n - 1)/2)$
+$= nT(n/n) + n^5 \frac{n-1}{2}$
+
+$= n + n^5 \frac{n-1}{2}$
+
+$T(n) ∈ Θ(n^5 \frac{n-1}{2}$
 
 
 ### Sources: I received help from Lars Kothoff.
