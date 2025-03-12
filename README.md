@@ -48,17 +48,20 @@ $= 3(3^2T(n/(3^2)/3) + (3+1)n^5)) + n^5$
 
 $= 3^3 T(n/3^3) + (9+3+1)n^5$
     
-$= 3^i T(n/3^i) + n^5 \sum_{j=0}^{i-1} 3^j$
+$= 3^i T(n/3^i) + n^5 \sum_{j=1}^{i} 3^(j-1)$
+
+$= 3^i T(n/3^i) + n^5 (1-3^n)/(1-3)$
+
+$= 3^i T(n/3^i) + n^5 (3^n - 1)/2$
     
 for $i = \log{_3}{n}$
     
-$= nT(1) + n^5 \sum_{j=0}^{\log{_3}{n}-1} 3^j$
+$= nT(1) + n^5 (3^n - 1)/2$
     
-$= n + n^5 \sum_{j=0}^{\log{_3}{n}-1} 3^j$
+$= n + n^5 (3^n - 1)/2$
 
-$T(n) ∈ Θ(n^5 \sum_{j=0}^{\log{n}-1} 3^j)$
+$T(n) ∈ Θ(n^5 (3^n - 1)/2)$
 
-***Note: The summation feels very out of place but I believe it to be the correct math for the $n^5$ part of the equation. Please let me know if it is not.***
 
 ### Sources: I received help from Lars Kothoff.
 
