@@ -50,7 +50,7 @@ $= 3^3 T(n/3^3) + (9+3+1)n^5$
     
 $= 3^i T(n/3^i) + n^5 \sum_{j=1}^{i} 3^(j-1)$
 
-by geometric sum, $\sum{x=1}^{y} a{_1} r^{i-1}  = \frac{a{_1}(1-r^y)}{1-r}$
+by geometric sum, $\sum_{x=1}^{y} a{_1} r^{i-1}  = \frac{a{_1}(1-r^y)}{1-r}$
 
 where $a{_1}$ is the initial term and $r$ is the common ration
 
