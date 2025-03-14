@@ -38,36 +38,29 @@ The recurrence relation is $3T(n/3) + n^5$ for $n > 1$ where for $n ≤ 1$, $T(1
 This is because when $n ≤ 1$ the funtcion performs a check and returns. For any other value of $n$, the function makes 3 recursive called with argument $n/3$ and goes through 
 a for loop that adds $(n* n) * (n) * (n*n) = n^5$ to the funciton.
 
-$T(n) = 3T(n/3) + n^5$
+$T(n) = 3T(\frac{n}{3}) + n^5$
 
-$= 3(3T(n/3/3) + n^5) + n^5$
+$= 3(3T(\frac{\frac{n}{3}}{3}) + (\frac{n}{3})^5 + n^5$
 
-$= 3^2 T(n/3^2) + (3+1)n^5$
+$= 3^2 T(\frac{n}{3^2}) + n^5 + n^5$
 
-$= 3(3^2T(n/(3^2)/3) + (3+1)n^5)) + n^5$
+$= 3^2 T(\frac{n}{3^2}) + 2n^5$
 
-$= 3^3 T(n/3^3) + (9+3+1)n^5$
-    
-$= 3^i T(n/3^i) + n^5 \sum_{j=1}^{i} 3^{j-1}$
+$= 3^2 (3(T\frac{\frac{n}{3}}{3^2}) + (\frac{n}{3})^5) + 2n^5$
 
-by geometric sum, $\sum_{x=1}^{y} a{_1} r^{i-1}  = \frac{a{_1}(1-r^y)}{1-r}$
+$= 3^3 T(/frac{n}{3^3}) + 3n^5$
 
-where $a{_1}$ is the initial term and $r$ is the common ratio
-
-so for $\sum_{j=1}^{i} 3^{j-1}$, $a{_1} = 1$ and $r = 3$ so the summation equals $\frac{1(1-3^i)}{1-3} = \frac{1-3^i}{-2} = \frac{3^i-1}{2}$
-
-$= 3^i T(n/3^i) + n^5 \frac{3^i-1}{2}$
+$= 3^i T(\frac{n}{3^i}) + in^5$
     
 for $i = \log{_3}{n}$
-    
-$= 3^{\log{_3}{n}} T(n/3^{\log{_3}{n}}) + n^5 \frac{3^{\log{_3}{n}}-1}{2}$
 
-$= nT(n/n) + n^5 \frac{n-1}{2}$
+$= 3^{\log{_3}{n}} T(n/3^{\log{_3}{n}}) + \log{_3}{n} n^5$
 
-$= n + n^5 \frac{n-1}{2}$
+$= n T(\frac{n}{n}) + n^5 \log{_3}{n}$
 
-$T(n) ∈ Θ(n^5 \frac{n-1}{2})$
+$= n + n^5 \log{_3}{n}$
 
+$T(n) ∈ Θ(n^5 \log{_3}{n})$
 
 ### Sources: I received help from Lars Kothoff.
 
