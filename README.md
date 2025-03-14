@@ -54,13 +54,13 @@ $= 3^i T(\frac{n}{3^i}) + in^5$
     
 for $i = \log{_3}{n}$
 
-$= 3^{\log{_3}{n}} T(n/3^{\log{_3}{n}}) + \log{_3}{n} n^5$
+$= 3^{\log{_3}{n}} T(\frac{n}{3^{\log{_3}{n}}}) + \log{_3}{n} n^5$
 
 $= n T(\frac{n}{n}) + n^5 \log{_3}{n}$
 
 $= n + n^5 \log{_3}{n}$
 
-$T(n) ∈ Θ(n^5 \log{_3}{n})$
+$T(n) ∈ Θ(n^5 \log{n})$
 
 ### Sources: I received help from Lars Kothoff.
 
