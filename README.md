@@ -60,7 +60,7 @@ $= 3^i T(\frac{n}{3^i}) + n^5 \sum_{k=0}^{i-1}(3^{-4})^k$
     
 for $i = \log{_3}{n}$
 
-$= 3^{\log{3}{n}} T(\frac{n}{3^\log{3}{n}}) + n^5 \sum_{k=0}^{\log{_3}{n}-1} (3^{-4})^k$
+$= 3^{\log{_3}{n}} T(\frac{n}{3^\log{_3}{n}}) + n^5 \sum_{k=0}^{\log{_3}{n}-1} (3^{-4})^k$
 
 by geometric series sum
 
