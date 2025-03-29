@@ -40,29 +40,43 @@ a for loop that adds $(n* n) * (n) * (n*n) = n^5$ to the funciton.
 
 $T(n) = 3T(\frac{n}{3}) + n^5$
 
-$= 3(3T(\frac{\frac{n}{3}}{3}) + (\frac{n}{3})^5 + n^5$
+$= 3(3T(\frac{\frac{n}{3}}{3}) + (\frac{n}{3})^5) + n^5$
 
-$= 3^2 T(\frac{n}{3^2}) + n^5 + n^5$
+$= 3^2 T(\frac{n}{3^2}) + 3\frac{n}{3})^5 + n^5$
 
-$= 3^2 T(\frac{n}{3^2}) + 2n^5$
+$= 3^2(3 T(\frac{\frac{n}{3^2}}{3}) + (\frac{n}{3^2})^5)) + 3\frac{n}{3})^5 + n^5$
 
-$= 3^2 (3T(\frac{\frac{n}{3}}{3^2}) + (\frac{n}{3})^5) + 2n^5$
+$= 3^3 T(\frac{n}{3^3}) + 3^2\frac{n}{3^2}^5 + 3\frac{n}{3})^5 + n^5$
 
-$= 3^3 T(\frac{n}{3^3}) + 3n^5$
+$= 3^3(3 T(\frac{\frac{n}{3^3}{3}) + (\frac{n}{3^3})^5)) + 3^2\frac{n}{3^2}^5 + 3\frac{n}{3})^5 + n^5$
 
-$= 3^i T(\frac{n}{3^i}) + in^5$
+$= 3^4 T(\frac{n}{3^4}) + 3^3\frac{n}{3^3}^5 + 3^2\frac{n}{3^2}^5 + 3\frac{n}{3})^5 + n^5$
+
+$= 3^4 T(\frac{n}{3^4}) + \frac{3^3}{3^15}n^5 + \frac{3^2}{3^10}n^5 + \frac{3}{3^5}n^5 + n^5$
+
+$= 3^4 T(\frac{n}{3^4}) + 3^{-12}n^5 + 3^{-8}n^5 + 3^{-4}n^5 + 3^0n^5$
+
+$= 3^i T(\frac{n}{3^i}) + n^5 \sum_{k=0}^{i-1}(3^{-4})^k$
     
 for $i = \log{_3}{n}$
 
-$= 3^{\log{_3}{n}} T(\frac{n}{3^{\log{_3}{n}}}) + \log{_3}{n} n^5$
+$= 3^{\log{3}{n}} T(\frac{n}{3^\log{3}{n}}) + n^5 \sum_{k=0}^{\log{_3}{n}-1}(3^{-4})^k$
 
-$= n T(\frac{n}{n}) + n^5 \log{_3}{n}$
+by geometric series sum
 
-$= n + n^5 \log{_3}{n}$
+$= nT(1) + n^5 (\frac{1-(3^{-4})^{\log{_3-1}{n}}}{1-3^{-4}}$
 
-$T(n) ∈ Θ(n^5 \log{n})$
+$= n + n^5 (\frac{81}{80} - \frac{3^8}{80n^4})$
+
+$= n + \frac{81}{80}n^5 - \frac{3^8}{80}n$
+
+$= \frac{81}{80}n^5 - \frac{80-3^8}{80}n$
+
+$T(n) ∈ Θ(\frac{81}{80}n^5)$
 
 ### Sources: I received help from Lars Kothoff.
+
+I used this link to help guide my recurrecne math: https://tildesites.bowdoin.edu/~ltoma/teaching/cs231/fall14/Lectures/02-recurrences/recurrences.pdf 
 
 “I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.” - Natalie Sleight 
 
